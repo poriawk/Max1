@@ -4,7 +4,7 @@ package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
 require("./bot/utils")
 
-VERSION = '2'
+VERSION = '1.6'
 
 -- This function is called when tg receive a msg
 function on_msg_receive (msg)
@@ -229,29 +229,18 @@ function create_config( )
     sudo_users = {(173008198)},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
+    about_text  = [[
+ bot anti spam ✒️ @anti_Robot_spam 🖋
+best anti spam robot 
+fast Run
+good plugins
+server linux 
+—----------
+Our channels
+@anti_Robot_spam_ch [persian]
 
-https://github.com/SEEDTEAM/TeleSeed
-
-Our team!
-Alphonse (@Iwals)
-I M /-\ N (@Imandaneshi)
-Siyanew (@Siyanew)
-Rondoozle (@Potus)
-Seyedan (@Seyedan25)
-
-Special thanks to:
-Juan Potato
-Siyanew
-Topkecleon
-Vamptacus
-
-Our channels:
-English: @TeleSeedCH
-Persian: @IranSeed
 ]],
-    help_text_realm = [[
+   help_text_realm = [[
 Realm Commands:
 
 !creategroup [name]
@@ -323,109 +312,103 @@ This command will send text to [group_id]
 » Only owner can use res,setowner,promote,demote and log commands
 
 ]],
-    help_text = [[
+   help_text = [[
 Commands list :
+راهنمای سوپرگروه ربات anti_ROBOTspam :
 
-!kick [username|id]
-You can also do it by reply
+نمایش اطلاعات سوپر گروه
+!info
+⚙⚙⚙⚙⚙⚙⚙
+نمایش ادمین های سوپرگروه
+!admins
+⚙⚙⚙⚙⚙⚙⚙
 
-!ban [ username|id]
-You can also do it by reply
-
-!unban [id]
-You can also do it by reply
-
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
-
-!kickme
-Will kick user
-
-!about
-Group description
-
-!setphoto
-Set and locks group photo
-
-!setname [name]
-Set group name
-
-!rules
-Group rules
-
-!id
-Return group id or user id
-
-!help
-Get commands list
-
-!lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
-
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
-!set rules [text]
-Set [text] as rules
-
-!set about [text]
-Set [text] as about
-
-!settings
-Returns group settings
-
-!newlink
-Create/revoke your group link
-
-!link
-Returns group link
-
+نمایش مدیر اصلی سوپرگروه
 !owner
-Returns group owner id
+⚙⚙⚙⚙⚙⚙⚙
+نمایش کمک مدیران
+!modlist
+⚙⚙⚙⚙⚙⚙⚙
+نمایش ربات های فعال سوپرگروه
+!bots
+⚙⚙⚙⚙⚙⚙⚙
 
-!setowner [id]
-Will set id as owner
+نمایش اعضا سوپرگروه
+!who
+⚙⚙⚙⚙⚙⚙⚙
 
-!setflood [value]
-Set [value] as flood sensitivity
+محروم و بلاک کردن شخص از سوپرگروه 
+!block
+⚙⚙⚙⚙⚙⚙⚙
+محروم کردن شخص
+!ban
+⚙⚙⚙⚙⚙⚙⚙
+دراوردن از محرومیت
+!unban
+⚙⚙⚙⚙⚙⚙⚙
+نمایش ایدی گروه و شخص مورد نظر
+!id
+⚙⚙⚙⚙⚙⚙⚙
+خروج از سوپرگروه
+!kickme
+⚙⚙⚙⚙⚙⚙⚙
+برای کمک مدیر کردن یک فرد 
+!promote {یوزرنیم}
+⚙⚙⚙⚙⚙⚙⚙
+برای خارج کردن از کمک مدیر
+!demote {یوزرنیم}
+⚙⚙⚙⚙⚙⚙⚙
+برای قراردادن عکس برروی پروفایل گروه
+!setphoto
+⚙⚙⚙⚙⚙⚙⚙
+برای قرار دادن اسم گروه
+!setname{نام مورد نظر}
+⚙⚙⚙⚙⚙⚙⚙
+ساخت لینک جدید
+!newlink
+⚙⚙⚙⚙⚙⚙⚙
+نمایش لینک گروه
+!link
+⚙⚙⚙⚙⚙⚙⚙
+برای نمایش قوانین گروه
+!rules
+⚙⚙⚙⚙⚙⚙⚙
+برای قفل کردن {ارسال لینک تبلیغ/تکرار/اسپم/چت کردن فارسی/ادکردن و ورود عضو جدید/چپ به راست/ارسال استیکر/ارسال شماره تلفن/تگ}
+!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+به ترتیب استفاده میشود
 
-!stats
-Simple message statistics
+⚙⚙⚙⚙⚙⚙⚙
+برای دراوردن قفل {ارسال لینک تبلیغ/تکرار/اسپم/چت کردن فارسی/ادکردن و ورود عضو جدید/چپ به راست/ارسال استیکر/ارسال شماره تلفن/تگ}
+!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+به ترتیب استفاده میشود
+⚙⚙⚙⚙⚙⚙⚙
+موت کردن{مخصوص سوپرگروه}: بستن ارسال همه چیزها /صداو ویس/تصاویرمتحرک/عکس/فیلم
+!mute [all|audio|gifs|photo|video]
+برای بستن ارسال استفاده میشود
+⚙⚙⚙⚙⚙⚙⚙
 
-!save [value] [text]
-Save [text] as [value]
+برای ان موت کردن و بازکردن ارسال {مخصوص سوپرگروه}:بازکردن ارسال همه چیزها /صداو ویس/تصاویرمتحرک/عکس/فیلم
+!unmute [all|audio|gifs|photo|video]
+برای بازکردن ارسال استفاده میشود
+⚙⚙⚙⚙⚙⚙⚙
 
-!get [value]
-Returns text of [value]
+قراردادن قوانین
+!set rules متن قوانین
+⚙⚙⚙⚙⚙⚙⚙
+قراردادن توضیحات
 
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
+!set about متن مورد نظر
+⚙⚙⚙⚙⚙⚙⚙
+نمایش تنظیمات گروه
+!settings
+⚙⚙⚙⚙⚙⚙⚙
+پاک کردن پیام مورد نظر
+!del
 
-!res [username]
-Returns user id
 
-!log
-Will return group logs
+⚙⚙⚙⚙⚙⚙⚙
 
-!banlist
-Will return group ban list
-
-» U can use both "/" and "!" 
-
-» Only mods, owner and admin can add bots in group
-
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-» Only owner can use res,setowner,promote,demote and log commands
+شما میتوانید از !و # و / استفاده کنید
 
 ]]
   }
